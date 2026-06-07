@@ -35,8 +35,8 @@ chmod +x /root/setup_vpn.sh
 ssh root@<ip-сервера>
 
 # Скачать
-wget -O setup_vpn.sh <https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh> 2>/dev/null || \
-  curl -o setup_vpn.sh <https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh>
+wget -O setup_vpn.sh https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh 2>/dev/null || \
+  curl -o setup_vpn.sh https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh
 
 # Запустить
 chmod +x setup_vpn.sh
@@ -99,7 +99,7 @@ ansible-playbook -i inventory.ini deploy-vpn.yml
 ```yaml
 #cloud-config
 runcmd:
-  - wget -O /root/setup_vpn.sh <https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh>
+  - wget -O /root/setup_vpn.sh https://github.com/mikiway902/automative-3x-ui-server-build/setup_vpn.sh
   - chmod +x /root/setup_vpn.sh
   - printf '%s\n' "<ip-сервера>" "<domain.com>" "<email@example.com>" | /root/setup_vpn.sh
 ```
