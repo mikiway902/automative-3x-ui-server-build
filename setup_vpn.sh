@@ -1,4 +1,5 @@
 #!/bin/bash
+sed -i 's/\r$//' "$0" 2>/dev/null
 set -e
 
 VPN_IP=""
